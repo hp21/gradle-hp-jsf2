@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : gradle-hp-jsf2 : gradle-hp-jsf2-1.0.war">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/gradle-hp-jsf2</output-path>
+    <root id="archive" name="gradle-hp-jsf2-1.0.war">
+      <element id="javaee-facet-resources" facet="gradle-hp-jsf2/web/Web Gradle : gradle-hp-jsf2-1.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gradle-hp-jsf2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: javax.faces-2.2.1" />
+          <element id="library" level="project" name="Gradle: primefaces-5.0" />
+          <element id="library" level="project" name="Gradle: joda-time-2.4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/gradle-hp-jsf2/exploded/gradle-hp-jsf2-1.0.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://mojarra.dev.java.net/mojarra_ext">
+<h:head><title>Enter Bid</title>
+<link href="./css/styles.css" 
+      rel="stylesheet" type="text/css"/> 
+</h:head>
+<h:body>
+<div align="center">
+<h1 class="title">Enter Bid</h1>
+<br/>
+<fieldset>
+<legend>Parameters for Your Bid</legend>
+<h:form>
+<h:messages styleClass="error"/>
+<h:panelGrid columns="2" styleClass="formTable">
+  User ID: 
+  <h:inputText value="#{bidBean1.userID}"/>
+  
+  Keyword: 
+  <h:inputText value="#{bidBean1.keyword}"/>
+  
+  Bid Amount: $
+  <h:inputText value="#{bidBean1.bidAmount}" required="true" immediate="true">
+      <f:regexValidator pattern="\d+" />
+  </h:inputText>
+  
+  Duration: 
+  <h:inputText value="#{bidBean1.bidDuration}"/>
+</h:panelGrid>
+  <h:commandButton value="Send Bid!" 
+                   action="#{bidBean1.doBid}" immediate="true"/>
+</h:form>
+</fieldset>
+
+
+</div></h:body></html>

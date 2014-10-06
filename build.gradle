@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+version = '1.0'
+
+// Uses JDK 7
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+repositories {
+    mavenLocal()
+    maven {
+        url "http://aiapd-testenv.lic.fra.dlh.de/artifactory/libs-release-local"
+        credentials {
+            username 'u292148'
+            password 'start123'
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.glassfish:javax.faces:2.2.1"
+    compile "org.primefaces:primefaces:5.0"
+    compile "joda-time:joda-time:2.4"
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile "junit:junit:4.11"
+}
