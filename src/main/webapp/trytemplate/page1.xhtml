@@ -5,7 +5,9 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
+
     <ui:composition template="common.xhtml">
+        <ui:param name="currentDate" value="#{hp.date()}"/>
         <ui:define name="header">
             <h2>Page1 header</h2>
         </ui:define>
@@ -17,5 +19,9 @@
             <h2>Page1 Footer</h2>
         </ui:define>
     </ui:composition>
+    <ui:include src="include2.xhtml">
+        <ui:param name="value" value="'asdfasdf'"/>
+    </ui:include>
+
 </h:body>
 </html>
