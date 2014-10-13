@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head/>
+
+<body>
+<h:form>
+    Text before will stay.
+    <ui:decorate template="decorate-template.xhtml">
+        <ui:define name="title">Our Products</ui:define>
+        <ui:define name="body">
+            <ul>
+                <li>Apples</li>
+                <li>Oranges</li>
+                <li>Bananas</li>
+            </ul>
+        </ui:define>
+    </ui:decorate>
+    Text after will stay.
+</h:form>
+</body>
+</html>
