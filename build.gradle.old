@@ -23,8 +23,10 @@ repositories {
 
 dependencies {
     compile "org.glassfish:javax.faces:2.2.1"
-    compile "org.primefaces:primefaces:5.0"
+    //compile "org.primefaces:primefaces:5.0"
+    compile "org.primefaces:primefaces:3.4.5"
     compile "joda-time:joda-time:2.4"
+    compile: "commons-fileupload:commons-fileupload:1.2.1"
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     testCompile "junit:junit:4.11"
 }

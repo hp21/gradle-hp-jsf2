@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gradle-hp-jsf2.iml" filepath="$PROJECT_DIR$/gradle-hp-jsf2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hp-jsf2.iml" filepath="$PROJECT_DIR$/hp-jsf2.iml" />
     </modules>
   </component>
 </project>
-
