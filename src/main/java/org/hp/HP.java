@@ -7,6 +7,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.faces.event.PhaseId;
+import javax.servlet.ServletContext;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.ISODateTimeFormat;
@@ -19,7 +20,9 @@ import org.primefaces.model.StreamedContent;
 @ManagedBean(name = "hp")
 public class HP implements Serializable {
 
-    @ManagedProperty( value = "#{hp1}")
+    private static final DefaultStreamedContent DEFAULT_STREAMED_CONTENT = new DefaultStreamedContent();
+
+    @ManagedProperty(value = "#{hp1}")
     private HP1 hp1;
 
     public HP() {
@@ -38,20 +41,16 @@ public class HP implements Serializable {
         this.hp1 = hp1;
     }
 
-    public StreamedContent getImage(){
+    public StreamedContent getImage() {
         FacesContext context = FacesContext.getCurrentInstance();
 
         if (context.getCurrentPhaseId() == PhaseId.RENDER_RESPONSE) {
             // So, we're rendering the HTML. Return a stub StreamedContent so that it will generate right URL.
-            return new DefaultStreamedContent();
-        }
-        else {
+            return DEFAULT_STREAMED_CONTENT;
+        } else {
             // So, browser is requesting the image. Return a real StreamedContent with the image bytes.
-            String studentId = context.getExternalContext().getRequestParameterMap().get("studentId");
-            InputStream imageStream = this.getClass().getResourceAsStream("cat.jpg");
+            InputStream imageStream = ((ServletContext) context.getExternalContext().getContext()).getResourceAsStream("/images/cat.jpg");
             return new DefaultStreamedContent(imageStream);
-
-//            return new DefaultStreamedContent(new ByteArrayInputStream(student.getImage()));
         }
     }
 
