@@ -7,7 +7,8 @@
           <element id="module-output" name="hp-jsf2" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.2.1" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.11" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.11" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.4.5" />
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.4" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.1" />
